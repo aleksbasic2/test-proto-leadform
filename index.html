@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-to-Lead Form</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        input[type="submit"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D01000001Ji26" method="POST">
+        <input type="hidden" name="oid" value="00D01000001Ji26">
+        <input type="hidden" name="retURL" value="http://www.proto.xyz">
+
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" size="20" type="text" />
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" />
+
+        <label for="phone">Phone</label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+
+        <label for="city">City</label>
+        <input id="city" maxlength="40" name="city" size="20" type="text" />
+
+        <label for="state">State/Province</label>
+        <input id="state" maxlength="20" name="state" size="20" type="text" />
+
+        <label for="00N0L000006sRnV">Product Interests</label>
+        <select id="00N0L000006sRnV" multiple="multiple" name="00N0L000006sRnV" title="Product Interests">
+            <option value="Point-of-Sale &amp; Payments">Point-of-Sale &amp; Payments</option>
+            <option value="Payroll">Payroll</option>
+            <option value="Caviar">Caviar</option>
+            <option value="Capital">Capital</option>
+            <option value="Invoices">Invoices</option>
+            <option value="Appointments">Appointments</option>
+            <option value="Gift Cards">Gift Cards</option>
+            <option value="Installments">Installments</option>
+            <option value="Business Debit Card">Business Debit Card</option>
+            <option value="Marketing &amp; Loyalty">Marketing &amp; Loyalty</option>
+            <option value="Square Online Store">Square Online Store</option>
+            <option value="Online Interest">Online Interest</option>
+            <option value="In-Store Interest">In-Store Interest</option>
+            <option value="Express Checkout Interest">Express Checkout Interest</option>
+            <option value="Cross Border Trade Interest">Cross Border Trade Interest</option>
+            <option value="PDP Interest">PDP Interest</option>
+            <option value="Chips">Chips</option>
+            <option value="Development Kits">Development Kits</option>
+            <option value="Mining Rigs">Mining Rigs</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea name="description"></textarea>
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
